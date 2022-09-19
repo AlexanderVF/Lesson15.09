@@ -15,7 +15,7 @@ for (int i = m; i <= n; i++) {
 Console.WriteLine(sum); */
 
 // через рекурсию
-Console.Clear();
+/* Console.Clear();
 Console.WriteLine("Vvedite M");
 int m = int.Parse(Console.ReadLine());
 Console.WriteLine("Vvedite N");
@@ -28,4 +28,18 @@ int SumNew(int m, int n) {
     if (m < n) return n + SumNew(m,n-1);
     else return n + SumNew(m,n+1);
 }
-Console.WriteLine("M = " + m + "; N = " + n + ". -> " + SumNew(m,n));
+Console.WriteLine("M = " + m + "; N = " + n + ". -> " + SumNew(m,n)); */
+
+// третий вариант
+Console.Clear();
+Console.WriteLine("Vvedite M");
+int m = int.Parse(Console.ReadLine());
+Console.WriteLine("Vvedite N");
+int n = int.Parse(Console.ReadLine());
+
+int f(int m, int n)
+{
+if (n == m) return m;
+else return n + f(m, n - 1);
+}
+Console.WriteLine("M = " + m + "; N = " + n + ". -> " + f(m,n));
